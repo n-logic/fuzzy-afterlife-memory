@@ -83,7 +83,7 @@ function update() {
   tank.x = Math.max(Math.min(tank.x, scr.width - (30 + taSprite.w)), 30);
 // shoot the bullets
   if (input.isPressed(32)) {
-    bullets.push(new Bullet(tank.x, tank.y, -8, 2, 6, "#FFF"))
+    window.bullets.push(new Bullet(tank.x, tank.y, -8, 2, 6, "#FFF"))
   };
   console.log(bullets)
 //  for (var i = 0, len = bullets.length; i < len; i++){

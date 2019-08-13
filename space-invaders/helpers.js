@@ -15,11 +15,12 @@ Bullet.prototype.update = function() {
 };
 
 // screen
-function SScreen(width, height){
+function SScreen(width, height, color){
   this.canvas = document.createElement("canvas");
   this.canvas.width = this.width = width;
   this.canvas.height = this.height = height;
   this.ctx = this.canvas.getContext("2d");
+  this.canvas.color = this.color = color;
 
   document.body.appendChild(this.canvas);
 };
@@ -35,7 +36,7 @@ SScreen.prototype.drawSprite = function(sp, x, y) {
 SScreen.prototype.drawBullet = function(bullet){
   //this.beginPath();
   this.ctx.fillStyle = this.color;
-  this.ctx.fillRect(bullet.x, bullet.y, bullet.w, bullet.h);
+  this.ctx.fillRect(bullet.x, bullet.y, bullet.width, bullet.height);
   //this.closePath();
 }
 
