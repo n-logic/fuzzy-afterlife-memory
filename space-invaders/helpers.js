@@ -36,7 +36,7 @@ SScreen.prototype.drawSprite = function(sp, x, y) {
 SScreen.prototype.drawBullet = function(bullet){
   //this.beginPath();
   this.ctx.fillStyle = this.color;
-  this.ctx.fillRect(bullet.x, bullet.y, bullet.width, bullet.height);
+  this.ctx.fillRect(bullet.x, bullet.y, bullet.w, bullet.h);
   //this.closePath();
 }
 
